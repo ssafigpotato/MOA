@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7f3da53acc27cfc1a9b8ccd281775ec4ceb5b38ff1c6deb13864f164c071fe9a
-size 364
+/**
+ * @format
+ */
+
+import 'react-native';
+import React from 'react';
+import App from '../App';
+
+// Note: import explicitly to use the types shipped with jest.
+import {it} from '@jest/globals';
+
+// Note: test renderer must be required after react-native.
+import renderer from 'react-test-renderer';
+
+it('renders correctly', () => {
+  renderer.create(<App />);
+});
