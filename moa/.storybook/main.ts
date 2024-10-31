@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:de7dda5f6d4ea7fa7186a4d43728ae2a0873cffcd3cef7348971d7387d5749cd
-size 260
+import { StorybookConfig } from '@storybook/react-native';
+
+const main: StorybookConfig = {
+  stories: ['./stories/**/*.stories.?(ts|tsx|js|jsx)'],
+  addons: ['@storybook/addon-ondevice-controls', '@storybook/addon-ondevice-actions'],
+};
+
+export default main;
