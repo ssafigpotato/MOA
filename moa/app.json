@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e6f96203365ddcd6f7c4b367c3a5bf9b98e39e1a43288d8f636a4277bb6e40c9
-size 44
+{
+  "name": "moa",
+  "displayName": "moa"
+}
