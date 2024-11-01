@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:48581dc0d561479f566471cf15a29a70312f8439cd19efa40a4bf4cc1b20ea71
-size 263
+path: ../data/widerface  # 데이터셋 경로
+train: images/train         # 학습 데이터 경로
+val: images/val             # 검증 데이터 경로
+
+nc: 1  # 클래스 수 (얼굴이 1개 클래스이므로 1로 설정)
+names: ['face']  # 클래스 이름
