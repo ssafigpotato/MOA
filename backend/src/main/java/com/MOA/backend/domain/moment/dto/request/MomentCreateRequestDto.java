@@ -1,15 +1,3 @@
-package com.MOA.backend.domain.moment.dto.request;
-
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import lombok.Builder;
-import lombok.Getter;
-
-@Getter
-@Builder
-public class MomentCreateRequestDto {
-    private Long groupId;
-    private String momentName;
-    private String momentDescription;
-    private String uploadOption;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:120ea3b5c6a0f3903f82f70a5c8c3f73dc2acfe70077242f98d9f609977d63a6
+size 359
