@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b1a900e7523feedb1554567d609a41f06f23f2b43da173443452365d946d43e0
-size 248
+from ultralytics import YOLO
+import os
+
+os.environ["CUDA_VISIBLE_DEVICES"]="8" # 주피터허브 gpu 디바이스 번호 지정
+
+if __name__ == "__main__":
+    model = YOLO('yolov8n.pt')
+    model.train(data='widerface.yaml', epochs=100, imgsz=640)
