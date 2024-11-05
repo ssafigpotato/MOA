@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2ccd1ec8842d7e607eb1aea152c1066f854fdff23578dcabfba4663ee46b78d3
-size 420
+package com.MOA.backend.domain.member.repository;
+
+import com.MOA.backend.domain.member.entity.Member;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface MemberRepository extends JpaRepository<Member, Long> {
+
+    List<Member> findByGroupGroupId(Long groupId);
+
+    List<Member> findByUserUserId(Long userId);
+
+    void deleteByGroupGroupIdAndUserUserId(Long groupId, Long userId);
+
+    Boolean existsByUserUserId(Long userId);
+
+
+}
