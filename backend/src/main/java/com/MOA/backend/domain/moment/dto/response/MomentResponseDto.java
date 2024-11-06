@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a73efaca7a95fae84cbd41ee8ad421ee6154025a608e15661144e4a57c6f0244
-size 334
+package com.MOA.backend.domain.moment.dto.response;
+
+import lombok.Builder;
+import lombok.Getter;
+
+import java.util.Date;
+
+@Builder
+@Getter
+public class MomentResponseDto {
+    private String momentId;
+    private String momentTitle;
+    private String momentDescription;
+    private String momentOwner;
+    private Date createdAt;
+}
