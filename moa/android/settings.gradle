@@ -1,9 +1,3 @@
-pluginManagement { includeBuild("../node_modules/@react-native/gradle-plugin") }
-plugins { id("com.facebook.react.settings") }
-extensions.configure(com.facebook.react.ReactSettingsExtension){ ex -> ex.autolinkLibrariesFromCommand() }
-rootProject.name = 'moa'
-include ':app'
-includeBuild('../node_modules/@react-native/gradle-plugin')
-
-include ':react-native-config'
-project(':react-native-config').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-config/android')
+version https://git-lfs.github.com/spec/v1
+oid sha256:efbd49c51ecc6d2a3dce035dae3a8129571cafcdd49d7c837af7d8b138519c94
+size 661
