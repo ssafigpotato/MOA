@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:08ce04fa83581a349eb9fbd1c7e31d1f78eadc4f96afc6468fdad37ecb86e8d3
-size 141
+<resources>
+    <string name="app_name">moa</string>
+    <string name="kakao_app_key">4a3fdb040f645b2e0bba4c975b6b8ba5</string>
+</resources>
