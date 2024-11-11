@@ -1,20 +1,3 @@
-package com.MOA.backend.domain.moment.dto.response;
-
-import lombok.Builder;
-import lombok.Getter;
-import org.bson.types.ObjectId;
-
-import java.util.List;
-
-@Builder
-@Getter
-public class MomentDetailResponseDto {
-    private String id;
-    private Long groupId;
-    private String momentPin;
-    private List<Long> userIds;
-    private String momentName;
-    private String momentDescription;
-    private String momentOwner;
-    private String uploadOption;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e161689de4dcbc979f68ec6d7cb1b25dbcd85f704729100d270ae2252ffd7083
+size 634
