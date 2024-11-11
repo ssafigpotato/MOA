@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:22b4137fac52b8973045768fc1e19dea01e394a527fd31a49a628f593b2d311e
-size 362
+package com.MOA.backend.domain.notification.dto.request;
+
+import lombok.*;
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@Getter
+@Builder
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
+public class FCMInvitationRequest {
+    private String userToken;
+    private String inviteName;
+    private String groupName;
+}
