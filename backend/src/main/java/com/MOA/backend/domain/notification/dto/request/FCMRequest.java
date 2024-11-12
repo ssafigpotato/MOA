@@ -1,22 +1,3 @@
-package com.MOA.backend.domain.notification.dto.request;
-
-import com.fasterxml.jackson.annotation.JsonInclude;
-import lombok.*;
-import lombok.extern.slf4j.Slf4j;
-
-@Slf4j
-@Getter
-@Builder
-@AllArgsConstructor(access = AccessLevel.PRIVATE)
-@NoArgsConstructor(access = AccessLevel.PRIVATE)
-public class FCMRequest {
-
-    private Long targetGroup;
-
-    @JsonInclude(JsonInclude.Include.NON_NULL)
-    private String title;
-
-    @JsonInclude(JsonInclude.Include.NON_NULL)
-    private String body;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c5328c6363034e2fe484e35d2a2282d07390e3d044fd5d577b6d2a35c0afeebf
+size 493
