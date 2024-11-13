@@ -1,10 +1,3 @@
-package com.MOA.backend.domain.group.repository;
-
-import com.MOA.backend.domain.group.entity.Group;
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import java.util.Optional;
-
-public interface GroupRepository extends JpaRepository<Group, Long> {
-    Optional<Group> findById(Long groupId);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:46196154207e44415a75dd64165af2657983497dc0d47396c986452a70da701d
+size 307
