@@ -1,14 +1,3 @@
-package com.MOA.backend.domain.group.dto.request;
-
-import lombok.AllArgsConstructor;
-import lombok.Data;
-
-@Data
-@AllArgsConstructor
-public class GroupCreateDto {
-    private String groupName;
-    private String PIN;
-    private String groupDescription;
-    private String color;
-    private String icon;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:bf1c70f8dad9e1820c5bdd8f960e99a97802c8f8d7a50737fd8c5686d8343398
+size 306
