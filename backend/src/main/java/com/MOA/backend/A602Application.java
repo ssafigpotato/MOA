@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:92c27005881972fa141c5174cc05f5f55386df653bb9e158088c3795012f2680
-size 485
+package com.MOA.backend;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
+
+@SpringBootApplication
+@EnableScheduling
+public class A602Application {
+
+	public static void main(String[] args) {
+		SpringApplication.run(A602Application.class, args);
+	}
+
+}
