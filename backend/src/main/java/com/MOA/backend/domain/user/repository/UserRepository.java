@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a1e00a038b0ec49336c36969ba53ec4ce2f0a17b6cd1513f5c94bde546eabd75
-size 434
+package com.MOA.backend.domain.user.repository;
+
+import com.MOA.backend.domain.user.entity.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+import java.util.Optional;
+
+public interface UserRepository extends JpaRepository<User, Long> {
+
+    Optional<User> findByUserEmail(String userEmail);
+
+    Optional<User> findById(Long userId);
+
+    List<User> findAllByUserIdIn(List<Long> userIds);
+}
