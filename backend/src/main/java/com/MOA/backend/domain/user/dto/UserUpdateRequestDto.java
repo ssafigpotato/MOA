@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:37e82631257595c5894d81d2fc35a1d73dca01af8f5daca25f3a0f2ca488c21e
-size 261
+package com.MOA.backend.domain.user.dto;
+
+import lombok.Builder;
+import lombok.Getter;
+import org.springframework.web.multipart.MultipartFile;
+
+@Getter
+@Builder
+public class UserUpdateRequestDto {
+    private String nickname;
+    private MultipartFile image;
+}
