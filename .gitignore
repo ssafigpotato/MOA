@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:425798a082fdba491e587ad0cd5cdc8186378ee4d12c555759e2837788532f90
-size 148
+moa/
+moa_env/
+my_log.log
+uvicorn.log
+nohup.out
+cuda-keyring_1.1-1_all.deb
+cuda_11.4.2_470.57.02_linux.run
+dlib/
+.env
+__pycache__/
+apis/__pycache__/
