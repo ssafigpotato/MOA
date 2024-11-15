@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6bcbb9a1e8ed63c81ae4fe6da23e7897632f4ee86c5c9471c0d3aa6e4f995d3e
-size 185
+### MR 타입
+
+- [x] 기능 추가
+- [ ] 기능 삭제
+- [ ] 버그 수정
+- [ ] 의존성, 환경 변수, 빌드 관련 코드 업데이트
+
+### 변경 사항
+
+-
+
+### 전달 사항
+
+-
