@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:35024ca4fd594a6806f1e3a23bad6a2e6a4466c8246489e523dd4cd4080e7c74
-size 476
+package com.MOA.backend.global.config;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+
+@Configuration
+@EnableJpaAuditing
+@EnableJpaRepositories(basePackages = {
+        "com.MOA.backend.domain.user",
+        "com.MOA.backend.domain.group",
+        "com.MOA.backend.domain.member"
+})
+public class JPAConfig {
+
+}
