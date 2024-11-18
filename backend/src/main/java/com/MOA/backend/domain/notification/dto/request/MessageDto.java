@@ -1,13 +1,3 @@
-package com.MOA.backend.domain.notification.dto.request;
-
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-public class MessageDto {
-    private Long groupId;
-    private Long imageCount;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:520fc6aafef49d28e8726ca3c8b7f417dc99549315cea8bcf952034c2d1981b2
+size 560
