@@ -1,19 +1,3 @@
-import React, {ReactNode} from 'react';
-import styled from 'styled-components/native';
-
-const Container = styled.View`
-  width: 100%;
-  height: 100%;
-  padding: 5% 6%;
-  background-color: ${({theme}) => theme.colors.white};
-`;
-
-interface PageContainerProps {
-  children: ReactNode;
-}
-
-const ScreenContainer: React.FC<PageContainerProps> = ({children}) => {
-  return <Container>{children}</Container>;
-};
-
-export default ScreenContainer;
+version https://git-lfs.github.com/spec/v1
+oid sha256:c4420e36557ce275d07ce14f695f95f0e1fbc327e322598619ce3550e27d8054
+size 437
