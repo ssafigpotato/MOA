@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:68cfc82f89c5eecb7ad036c0e35dc966bc1fed02cf0b0ebef2198e278bbf9b4f
-size 938
+package com.MOA.backend.domain.moment.repository;
+
+import com.MOA.backend.domain.moment.entity.DeletedMoment;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.Date;
+
+@Repository("mongoDeletedMomentRepository")
+public interface DeletedMomentRepository extends MongoRepository<DeletedMoment, String> {
+
+    /**
+     * 현재 시간 이전의 expiredAt에 해당하는 도큐먼트를 페이지 단위로 조회
+     * @param currentDate
+     * @param pageable
+     * @return
+     */
+    Page<DeletedMoment> findAllByExpiredAtBefore(Date currentDate, Pageable pageable);
+
+    /**
+     * 현재 시간 이전의 expiredAt에 해당하는 도큐먼트 삭제
+     * @param currentDate
+     * @return
+     */
+    Long deleteByExpiredAtBefore(Date currentDate);
+}

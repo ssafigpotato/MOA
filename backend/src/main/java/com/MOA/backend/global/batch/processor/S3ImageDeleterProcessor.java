@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ff46d0a3240ebb3066f6d88f04d6f8368528726b48325fe343ba9c925db3e8b5
-size 519
+package com.MOA.backend.global.batch.processor;
+
+import com.MOA.backend.domain.moment.entity.DeletedMoment;
+import org.springframework.batch.item.ItemProcessor;
+import org.springframework.stereotype.Component;
+
+@Component
+public class S3ImageDeleterProcessor implements ItemProcessor<DeletedMoment, String> {
+
+    @Override
+    public String process(DeletedMoment deletedMoment) {
+        // S3 경로 추출
+        return "group/" + deletedMoment.getGroupId() + "/moment/" + deletedMoment.getMomentId() + "/";
+    }
+}

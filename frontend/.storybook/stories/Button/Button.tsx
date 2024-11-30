@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:508a019e530ae346864f59cb2e76a997fbfef45fe2cdfd11cedd87f26fccbfec
-size 589
+import {TouchableOpacity, Text, StyleSheet} from 'react-native';
+
+export type MyButtonProps = {
+  onPress?: () => void;
+  text: string;
+};
+
+export const MyButton = ({onPress, text}: MyButtonProps) => {
+  return (
+    <TouchableOpacity
+      style={styles.container}
+      onPress={onPress}
+      activeOpacity={0.8}
+    >
+      <Text style={styles.text}>{text}</Text>
+    </TouchableOpacity>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    paddingHorizontal: 16,
+    paddingVertical: 8,
+    backgroundColor: 'purple',
+    borderRadius: 8,
+  },
+  text: {color: 'white'},
+});

@@ -1,3 +1,33 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f2b8bd6bb1075dcb533c01ef132771b97ac41824e674bd77c66066c9fadb3777
-size 705
+package com.MOA.backend.domain.notification.dto.request;
+
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+
+@Builder
+@Getter
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
+public class FCMMessage {
+
+    private boolean validateOnly;
+    private Message message;
+
+    @Builder
+    @AllArgsConstructor
+    @Getter
+    public static class Message {
+        private Notification notification;
+        private String token;
+        private String topic;
+        private String condition;
+    }
+
+    @Builder
+    @AllArgsConstructor
+    @Getter
+    public static class Notification {
+        private String title;
+        private String body;
+    }
+}

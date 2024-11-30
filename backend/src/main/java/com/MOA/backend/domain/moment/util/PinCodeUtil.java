@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f90216de7de66f8cc04f9986c94d3249bcac8b903da40f47fe03ebcba5d1ac2b
-size 639
+package com.MOA.backend.domain.moment.util;
+
+import org.springframework.stereotype.Component;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
+
+@Component
+public class PinCodeUtil {
+
+    private static final String CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    private final SecureRandom random = new SecureRandom();
+
+    public String generatePinCode() {
+        return random.ints(6, 0, CHARS.length())
+                .mapToObj(CHARS::charAt)
+                .collect(StringBuilder::new, StringBuilder::append, StringBuilder::append)
+                .toString();
+    }
+}

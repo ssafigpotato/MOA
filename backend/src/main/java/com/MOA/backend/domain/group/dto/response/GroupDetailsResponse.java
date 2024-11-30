@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bebb86f44790fa1a6526902bd6dbcec3d1466cbbee0bd84f67ff09fb605faecc
-size 954
+package com.MOA.backend.domain.group.dto.response;
+
+import com.MOA.backend.domain.group.entity.Group;
+import lombok.Builder;
+import lombok.Getter;
+
+import java.util.*;
+
+@Getter
+public class GroupDetailsResponse {
+    private Group group;
+    private GroupOwnerResponse groupOwner;
+    private List<UserInGroupDetailResponse> users;
+    private Map<String, Map<String, List<String>>> images;
+    private Map<String, Date> expiredAt;
+
+    @Builder
+    public GroupDetailsResponse(Group group, GroupOwnerResponse groupOwner, List<UserInGroupDetailResponse> users,
+                                Map<String, Map<String, List<String>>> images, Map<String, Date> expiredAt) {
+        this.group = group;
+        this.groupOwner = groupOwner;
+        this.users = users.isEmpty() ? new ArrayList<>() : users;
+        this.images = images.isEmpty() ? new HashMap<>() : images;
+        this.expiredAt = expiredAt.isEmpty() ? new HashMap<>() : expiredAt;
+    }
+}
