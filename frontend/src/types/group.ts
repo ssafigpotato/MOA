@@ -1,3 +1,41 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:41dfae4904be4a574fa95188bc8d4e56b556252180386e00d1e5036375e04aca
-size 771
+import {Member} from './moment';
+
+export type GroupInfo = {
+  groupId: string;
+  groupName: string;
+  groupColor: string;
+  groupIcon: string;
+  groupTotalImages: number;
+  memberCount: number;
+};
+
+export type Group = {
+  groupId: string;
+  groupPin: string;
+  groupName: string;
+  groupDescription: string;
+  groupIcon: string;
+  groupColor: string;
+  groupTotalImages: string;
+  createdAt: string;
+};
+
+export type GroupImages = {
+  thumbImgs: Record<string, string[]>;
+};
+
+export type GroupInfoDetail = {
+  group: Group;
+  users: Member[];
+  groupOwner: Member;
+  images: GroupImages;
+  expiredAt: Record<string, string>;
+};
+
+export type GroupAddInfo = {
+  groupId: string;
+  groupName: string;
+  groupDescription: string;
+  groupColor: string;
+  groupIcon: string;
+};

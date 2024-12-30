@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1ef70a9081b507a82286e2f5801420a0b5a34816753ac73f6e02370fd72bf75b
-size 552
+import {theme} from '../styles/theme';
+
+export const lightColorMap: {[key: string]: string} = {
+  red: theme.colors.lightred,
+  yellow: theme.colors.lightyellow,
+  green: theme.colors.lightgreen,
+  blue: theme.colors.lightblue,
+  purple: theme.colors.lightpurple,
+  pink: theme.colors.lightpink,
+};
+
+export const darkColorMap: {[key: string]: string} = {
+  red: theme.colors.darkred,
+  yellow: theme.colors.darkyellow,
+  green: theme.colors.darkgreen,
+  blue: theme.colors.darkblue,
+  purple: theme.colors.darkpurple,
+  pink: theme.colors.darkpink,
+};

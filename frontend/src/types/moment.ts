@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bb5efcc38a2ff05e013c3952b5a5d531efb5c5b5340f8f43e801596fb8721008
-size 630
+export type MomentInfo = {
+  momentId: string;
+  momentTitle: string;
+  momentOwner: string;
+  createdAt: string;
+};
+
+export type Member = {
+  userId: string;
+  nickname: string;
+  imageSrc: string;
+};
+
+export type Images = {
+  thumbImgs: string[];
+};
+
+export type MomentInfoDetail = {
+  id: string;
+  groupId: string;
+  momentPin: string;
+  members: Member[];
+  momentName: string;
+  momentDescription: string;
+  momentOwner: Member;
+  images: Images;
+  uploadOption: string;
+  createdAt: string;
+};
+
+export type MomentAddInfo = {
+  momentId: string;
+  momentName: string;
+  momentDescription: string;
+  uploadOption: string;
+};

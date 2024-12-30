@@ -1,3 +1,34 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fcfb5cc6d7423d996eaab6c3abf6f50532c280cc97380969b0b7bc597ae2aa2d
-size 787
+import React from 'react';
+import styled, {useTheme} from 'styled-components/native';
+import {ActivityIndicator} from 'react-native';
+
+const LoadingOverlay = styled.View<{isDark: boolean}>`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  ${({isDark}) =>
+    isDark
+      ? 'background-color: rgba(0, 0, 0, 0.5);'
+      : 'background-color: white'};
+  padding-bottom: 80px;
+`;
+
+interface LoadingSpinnerProps {
+  isDark?: boolean;
+}
+
+const LoadingSpinner = ({isDark = true}: LoadingSpinnerProps) => {
+  const theme = useTheme();
+
+  return (
+    <LoadingOverlay isDark={isDark}>
+      <ActivityIndicator size="large" color={theme.colors.maindarkorange} />
+    </LoadingOverlay>
+  );
+};
+
+export default LoadingSpinner;

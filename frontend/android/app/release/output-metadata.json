@@ -1,3 +1,33 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1d3ae91ca37e7b07810a415211507962e4f686988a9a536a549652575f369efa
-size 664
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.moa",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 1,
+      "versionName": "1.0",
+      "outputFile": "app-release.apk"
+    }
+  ],
+  "elementType": "File",
+  "baselineProfiles": [
+    {
+      "minApi": 28,
+      "maxApi": 30,
+      "baselineProfiles": ["baselineProfiles/1/app-release.dm"]
+    },
+    {
+      "minApi": 31,
+      "maxApi": 2147483647,
+      "baselineProfiles": ["baselineProfiles/0/app-release.dm"]
+    }
+  ],
+  "minSdkVersionForDexing": 24
+}
